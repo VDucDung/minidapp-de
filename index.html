@@ -92,7 +92,11 @@
           return;
         }
 
+        console.log(sdk)
+
         const provider = sdk.getWalletProvider();
+
+        console.log(provider)
         const accounts = await provider.request({ method: 'kaia_requestAccounts' });
         
         if (accounts && accounts.length > 0) {
