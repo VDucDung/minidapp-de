@@ -97,7 +97,11 @@
         const provider = sdk.getWalletProvider();
 
         console.log(provider)
+
+        console.log(provider.request)
         const accounts = await provider.request({ method: 'kaia_requestAccounts' });
+
+        console.log(accounts)
         
         if (accounts && accounts.length > 0) {
           connectedAddress = accounts[0];
